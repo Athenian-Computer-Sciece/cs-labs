@@ -1,24 +1,31 @@
-from variables import calc_age
+import pytest
+from variables import *
 
-age = 20
+global age
+age = 17
 
-def test_calc_age():
-    assert 20 == calc_age(age)
+def test_age_now(capsys):
+    age_now(age)
+    captured = capsys.readouterr()
+    assert captured.out == "I am currently 17 years old.\n\n"
+    # assert age_now(17) == 17
 
-'''
-def test_insert_to_list():
-    assert [3, 18, 12, 2, 75, 8, 33, 123] == insert_to_list(list)
+def test_age_1(capsys):
+    age_1(age)
+    captured = capsys.readouterr()
+    assert captured.out == "Next year I'll be 18 years old.\n\n"
+    # assert age_1(17) == 18
 
+def test_age_10(capsys):
+    # Test age in 10 years
+    age_10(age)
+    captured = capsys.readouterr()
+    assert captured.out == "In 10 years, I'll be 27!\n\n"
+    # assert age_10(17) == 27
 
-def test_remove_from_list():
-    assert [3, 18, 12, 2, 75, 33, 123] == remove_from_list(list)
-
-
-def test_sort_ascending():
-    assert [2, 3, 12, 18, 33, 75, 123] == sort_ascending(list)
-
-
-def test_check_list():
-    assert True == check_list(list)
-
-'''
+def test_age_50(capsys):
+    # My age in 50 years!
+    age_50(age)
+    captured = capsys.readouterr()
+    assert captured.out == "In 50 years, I'll be 67! Wow!\n\n"
+    # assert age_50(17) == 67

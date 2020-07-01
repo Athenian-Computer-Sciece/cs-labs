@@ -1,32 +1,33 @@
 # Complete the function below calculate your age after different numbers of years.
 
-def calc_age(x):
-    # Let's assume my age is 17
-    
-    print(f"Right now I'm {17} years old.\n")
-    print(f"Right now I'm {x} years old.\n")
+def age_now(x):
+    # My age now
+    print(f"I am currently {x} years old.\n")
+
+def age_1(y):
     # My age next year
-    print(f"Next year I'll be {x + 1} years old.\n")
+    print(f"Next year I'll be {y + 1} years old.\n")
 
+def age_10(z):
     # My age in 10 years
-    print(f"In 10 years, I'll be {x + 10}!\n")
+    print(f"In 10 years, I'll be {z + 10}!\n")
 
-
+def age_50(q):
     # My age in 50 years!
-    print("In 50 years, I'll be {x + 50}! Wow!\n")
-
-
-
-
-def append_to_list(x):  # Be sure to choose the parameter for your function
-    x.append(123)
-    return x  # Return your new list
-
+    print(f"In 50 years, I'll be {q + 50}! Wow!\n")
 
 
 
 
 if __name__ == '__main__':
-    # Use the print statements below to check your code. Do not change the starter_list or your program will not pass the automated test.
-    age_now = 15
-    print(age_calc(age_now))
+
+    age = 15    # change this number to your current age
+
+    # after you have this working by defining "age" above, comment that line out and add a new line
+    # below it to get the users age as an input.
+
+    age_now(age)   # run function age_now with argument age
+    age_1(age)    # run function age_1 with argument age
+    age_10(age)    # run function age_10 with argument age
+    age_50(age)    # run function age_50 with argument age
+
