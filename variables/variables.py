@@ -23,8 +23,10 @@ if __name__ == '__main__':
 
     age = 15    # change this number to your current age
 
-    # after you have this working by defining "age" above, comment that line out and add a new line
-    # below it to get the users age as an input.
+    '''
+    after you have this working by defining "age" above, you can comment that line out and add a new line
+    # below it to get the user's age as an input.
+    '''
 
     age_now(age)   # run function age_now with argument age
     age_1(age)    # run function age_1 with argument age
